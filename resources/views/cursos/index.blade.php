@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$diaz->nombre}}</h5>
                     <p class="card-text">{{$diaz->descripcion}}</p>
-                    <a href="#" class="btn btn-danger">Ver más</a>
+                    <a href="/cursos/{{$diaz->id}}" class="btn btn-danger">Ver más</a>
                 </div>
             </div>
         </div>

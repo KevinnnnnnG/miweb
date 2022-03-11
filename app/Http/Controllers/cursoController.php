@@ -19,7 +19,7 @@ class cursoController extends Controller
 
         $cursito = curso::all();
         //el metodo compact pide un parametro el cual sera nuestro array llamado cursito y va acompañado la vista que estamos llamando
-        return view('cursos.index', compact(array('cursito')));
+        return view('cursos.index', compact('cursito'));
     }
 
     /**
@@ -60,14 +60,16 @@ class cursoController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Muestra el recurso especificado
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $cursito = curso::find($id);
+        
+        return view('cursos.show', compact('cursito'));
     }
 
     /**
