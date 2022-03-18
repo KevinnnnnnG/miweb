@@ -7,7 +7,7 @@
     <body>
         {{--Al llamar el elemento por su nombre desde otra paginacion
             podremos implementar la plantilla--}}
- 
+
         {{--Este conteiner es para Boostrap--}}
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
             <a class="navbar-brand">Brand</a>
@@ -17,7 +17,7 @@
             <div id="my-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Item 1 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Cursos Disponibles<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>

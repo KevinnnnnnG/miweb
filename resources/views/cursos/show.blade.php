@@ -10,6 +10,6 @@
             <p class="card-text">{{$cursito->descripcion}}</p>
         </div>
         <a href="/cursos/{{$cursito->id}}/edit" class="btn btn-danger">Editar</a>
-    </div>  
+    </div>
 
 @endsection
