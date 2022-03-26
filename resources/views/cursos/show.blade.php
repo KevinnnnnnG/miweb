@@ -9,7 +9,7 @@
         <div class="card-body">
             <p class="card-text">{{$cursito->descripcion}}</p>
         </div>
-        <a href="/cursos/{{$cursito->id}}/edit" class="btn btn-danger">Editar</a>
+        <a href="/cursos/{{$cursito->id}}/edit" class="btn btn-info">Editar</a>
     </div>
 
 @endsection

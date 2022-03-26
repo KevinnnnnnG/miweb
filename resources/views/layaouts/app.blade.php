@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            хай живе україна - @yield('titulo')</title>
+            Education - @yield('titulo')</title>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     </head>
     <body>
@@ -9,8 +9,8 @@
             podremos implementar la plantilla--}}
 
         {{--Este conteiner es para Boostrap--}}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
-            <a class="navbar-brand">Brand</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <a class="navbar-brand">Educacion</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

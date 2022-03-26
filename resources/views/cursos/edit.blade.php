@@ -22,7 +22,7 @@
             <br>
             <input name="imagen" type="file" id="imagen">
         </div>
-        <button type="submit" class="btn btn-danger">Actualizar</button>
+        <button type="submit" class="btn btn-info">Actualizar</button>
     </form>
 
 @endsection
