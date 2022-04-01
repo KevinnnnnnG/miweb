@@ -10,6 +10,13 @@
             <p class="card-text">{{$cursito->descripcion}}</p>
         </div>
         <a href="/cursos/{{$cursito->id}}/edit" class="btn btn-info">Editar</a>
+        <br>
+        <br>
+        <form class="form-group" action="/cursos/{{$cursito->id}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            </button>
+        </form>
     </div>
-
 @endsection

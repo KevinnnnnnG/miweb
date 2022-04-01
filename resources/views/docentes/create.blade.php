@@ -2,7 +2,6 @@
 @section('titulo','Crear Docente')
 
 @section('contenido')
-
 <br>
     <h3>Crear un docente</h3>
     <br>

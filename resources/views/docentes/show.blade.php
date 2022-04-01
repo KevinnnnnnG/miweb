@@ -10,5 +10,13 @@
             <p class="card-text">{{$doc->nombres}}</p>
         </div>
         <a href="/docentes/{{$doc->id}}/edit" class="btn btn-info">Editar</a>
+        <br>
+        <br>
+        <form class="form-group" action="/docentes/{{$doc->id}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            </button>
+        </form>
     </div>
 @endsection

@@ -99,6 +99,13 @@ class DocenteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $doc = Docente::find($id);
+        $urlImagenBD = $doc->foto;
+        $nombreImagen = str_replace('public/','\storage\\', $urlImagenBD);
+        /* $rutaCompleta = public_path().$urlImagenBD;*/
+        $rutaCompleta = public_path().$nombreImagen;
+        unlink($rutaCompleta);
+        $doc -> delete();
+        return 'Eliminado';
     }
 }

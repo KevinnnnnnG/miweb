@@ -39,8 +39,18 @@ class cursoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(storeCursoRequest $request)
+    public function store(Request $request)
     {
+        $cursito = new curso();
+        $cursito->nombre = $request->input('nombre');
+        $cursito->descripcion = $request->input('descripcion');
+        if ($request->hasFile('imagen')){
+            $cursito->imagen = $request->file('imagen')->store('public');
+        }
+        $cursito->horas = $request->input('horas');
+        $cursito->save();
+        return 'waw lo lograstes guardar';
+
         //Imlementamos validaciones
             /* $validacionDatos = $request->validate(
             ['nombre'=>'required|max:10', 'imagen'=>'required|imagen']
@@ -53,7 +63,7 @@ class cursoController extends Controller
         */
         //return $request->input('nombre');
         //creamos una nueva instancia del modelo
-        $cursito = new curso();
+        /*  $cursito = new curso();
         //esto me permitira manipular la tabla+
         $cursito->nombre = $request->input('nombre');
         $cursito->descripcion = $request->input('descripcion');
@@ -62,6 +72,7 @@ class cursoController extends Controller
         }
         $cursito->save();
         return 'waw lo lograstes guardar';
+        */
     }
 
     /**
@@ -119,6 +130,13 @@ class cursoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cursito = curso::find($id);
+        $urlImagenBD = $cursito->imagen;
+        $nombreImagen = str_replace('public/','\storage\\', $urlImagenBD);
+        /* $rutaCompleta = public_path().$urlImagenBD;*/
+        $rutaCompleta = public_path().$nombreImagen;
+        unlink($rutaCompleta);
+        $cursito ->delete();
+        return 'Eliminado';
     }
 }
